@@ -1,0 +1,130 @@
+:root {
+  --green-900: #1f4d3f;
+  --green-700: #2f6f5c;
+  --green-100: #eef7f3;
+  --earth: #8a6d3b;
+  --text: #1f2933;
+  --muted: #52606d;
+  --white: #ffffff;
+  --shadow: 0 8px 24px rgba(31, 77, 63, 0.12);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  background: #f8fbfa;
+}
+
+a { color: var(--green-700); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header {
+  background: linear-gradient(110deg, var(--green-900), var(--green-700));
+  color: var(--white);
+  padding: 1rem 0 2rem;
+}
+
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand { font-weight: 700; font-size: 1.2rem; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--white);
+  padding: 0.45rem 0.65rem;
+  border-radius: 6px;
+}
+
+nav a.active, nav a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+}
+
+.hero {
+  margin-top: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 14px;
+  padding: 1.2rem;
+}
+
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: clamp(1.6rem, 2.6vw, 2.3rem); margin: 0 0 0.4rem; }
+h2 { margin-top: 2rem; font-size: clamp(1.3rem, 2vw, 1.8rem); color: var(--green-900); }
+h3 { margin-top: 1.2rem; color: var(--green-700); }
+
+main { padding: 2rem 0 3rem; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid #dbe7e2;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: var(--green-100);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--green-900);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+}
+th, td {
+  border: 1px solid #dce7e2;
+  padding: 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #f1f7f4; }
+
+footer {
+  background: #16382e;
+  color: #d4e9df;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.note {
+  border-left: 4px solid var(--earth);
+  background: #fff8eb;
+  padding: 0.75rem 0.9rem;
+  border-radius: 6px;
+}
+
+@media (max-width: 760px) {
+  .topbar { align-items: flex-start; }
+  nav ul { gap: 0.5rem; }
+}
